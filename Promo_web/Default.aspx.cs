@@ -1,4 +1,5 @@
-﻿using System;
+﻿using negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,21 @@ namespace Promo_web
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnParticipar_Click(object sender, EventArgs e)
+        {
+            VoucherNegocio negocio = new VoucherNegocio();
+            bool voucher = negocio.ExisteCodigo(txtVoucher.Text);
+
+            if (voucher)
+            {
+                Response.Redirect("elegirPremio.aspx");
+            }
+            else
+            {
+                //alerta o algún error
+            }
         }
     }
 }

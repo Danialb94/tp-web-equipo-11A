@@ -22,8 +22,8 @@ namespace negocio
                 {
                     int cantidad = (int)datos.Lector["Cantidad"];
                     return cantidad > 0;
+                    // cantidad > 0 == true : se puede reclamar el voucher
                 }
-
                 return false; 
             }
             catch(Exception ex) {
