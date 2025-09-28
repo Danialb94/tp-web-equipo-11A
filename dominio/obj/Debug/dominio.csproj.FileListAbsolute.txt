@@ -1,0 +1,12 @@
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-winform-equipo-11A\dominio\bin\Debug\dominio.dll
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-winform-equipo-11A\dominio\bin\Debug\dominio.pdb
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-winform-equipo-11A\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-winform-equipo-11A\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-winform-equipo-11A\dominio\obj\Debug\dominio.dll
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-winform-equipo-11A\dominio\obj\Debug\dominio.pdb
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11A\dominio\bin\Debug\dominio.dll
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11A\dominio\bin\Debug\dominio.pdb
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11A\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11A\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11A\dominio\obj\Debug\dominio.dll
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11A\dominio\obj\Debug\dominio.pdb
