@@ -62,6 +62,10 @@ namespace Promo_web
 
             try
             {
+                Page.Validate();
+                if (!Page.IsValid)
+                    return;
+
                 nuevo.Documento = txtDocumento.Text;
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Apellido = txtApellido.Text;
@@ -70,26 +74,46 @@ namespace Promo_web
                 nuevo.Ciudad = txtCiudad.Text;
                 nuevo.CP = int.Parse(txtCP.Text);
 
+                EmailService emailService = new EmailService(
+                    "programacionpruebamail@gmail.com",
+                    "wnzlnohczkdzlbas"
+                );
+
                 if (negocio.ExisteCliente(nuevo.Documento))
                 {
                     negocio.Modificar(nuevo);
                     lblMensaje.Text = "Cliente actualizado ✅";
                     lblMensaje.CssClass = "text-warning fw-bold";
+
+                    
+                    emailService.ArmarCorreo(
+                        txtEmail.Text,
+                        txtNombre.Text,
+                        txtApellido.Text
+                    );
                 }
                 else
                 {
                     negocio.Agregar(nuevo);
                     lblMensaje.Text = "Cliente registrado correctamente ✅";
                     lblMensaje.CssClass = "text-success fw-bold";
+
+                  
+                    emailService.ArmarCorreo(
+                        txtEmail.Text,
+                        txtNombre.Text,
+                        txtApellido.Text
+                    );
                 }
+
+                emailService.EnviarCorreo();
             }
             catch (Exception ex)
             {
                 lblMensaje.Text = "Error: " + ex.Message;
                 lblMensaje.CssClass = "text-danger fw-bold";
             }
-
-          
         }
+
     }
 }
