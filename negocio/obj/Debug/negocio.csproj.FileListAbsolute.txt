@@ -25,3 +25,12 @@ C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\negocio\obj\Debug\negoci
 C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\negocio\obj\Debug\negocio.csproj.Up2Date
 C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\negocio\obj\Debug\negocio.dll
 C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\negocio\obj\Debug\negocio.pdb
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\negocio\bin\Debug\negocio.dll
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\negocio\bin\Debug\negocio.pdb
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\negocio\bin\Debug\dominio.dll
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\negocio\bin\Debug\dominio.pdb
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\negocio\obj\Debug\negocio.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\negocio\obj\Debug\negocio.dll
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\negocio\obj\Debug\negocio.pdb

@@ -183,3 +183,15 @@ C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\Promo_web\obj\Debug\Prom
 C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.csproj.Up2Date
 C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.dll
 C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.pdb
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\bin\Promo_web.dll.config
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\bin\Promo_web.dll
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\bin\Promo_web.pdb
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\bin\dominio.dll
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\bin\negocio.dll
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\bin\dominio.pdb
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\bin\negocio.pdb
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.dll
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.pdb

@@ -16,3 +16,9 @@ C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\dominio\obj\Debug\domini
 C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\dominio\obj\Debug\dominio.dll
 C:\Users\Abril\Desktop\Repo Progra. 3\tp-web-equipo-11A\dominio\obj\Debug\dominio.pdb
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\dominio\bin\Debug\dominio.dll
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\dominio\bin\Debug\dominio.pdb
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\dominio\obj\Debug\dominio.dll
+C:\Users\Usuario\Desktop\Programacion III - Turno noche 2025 segundo cuatri\tp-web-equipo-11A\dominio\obj\Debug\dominio.pdb
