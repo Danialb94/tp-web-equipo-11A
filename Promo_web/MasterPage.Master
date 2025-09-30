@@ -28,7 +28,7 @@
                             </li>
 
                             <li>
-                                <a  class="nav-link active"  aria-current="page" href="Cliente.aspx" id="navCliente">Registrar CLiente</a>
+                                <a  class="nav-link active"  aria-current="page" href="Cliente.aspx" id="navCliente">Registrar Cliente</a>
                             </li>  
 
                         </ul>

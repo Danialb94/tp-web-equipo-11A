@@ -10,10 +10,10 @@
         <div class="row g-3 mb-3">
             <div class="col-md-4 position-relative">
                 <label for="txtDocumento" class="form-label">Documento</label>
-                <asp:TextBox ID="txtDocumento" runat="server" CssClass="form-control" placeholder="DNI" required />
+                <asp:TextBox ID="txtDocumento" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="DNI 11222333" required />
                 <asp:RegularExpressionValidator ErrorMessage="No válido" ControlToValidate="txtDocumento" ValidationExpression="^\d{7,8}$" runat="server" />
             </div>
-            <div class="col-md-2 align-self-end">
+            <div class="align-self-center col-md-2 mt-4">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar Cliente" CssClass="btn btn-primary" OnClick="btnBuscar_Click" />
             </div>
         </div>
@@ -24,40 +24,40 @@
             <!-- Nombre -->
             <div class="col-md-4 position-relative">
                 <label for="txtNombre" class="form-label">Nombre</label>
-                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" />
+                <asp:TextBox ID="txtNombre" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Nombre" />
                  <asp:RegularExpressionValidator ErrorMessage="No se aceptan números" ControlToValidate="txtNombre" ValidationExpression="^[^0-9]*$" runat="server" />
             </div>
 
             <!-- Apellido -->
             <div class="col-md-4 position-relative">
                 <label for="txtApellido" class="form-label">Apellido</label>
-                <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" />
+                <asp:TextBox ID="txtApellido" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Apellido" />
                 <asp:RegularExpressionValidator ErrorMessage="No se aceptan números" ControlToValidate="txtApellido" ValidationExpression="^[^0-9]*$" runat="server" />
             </div>
 
             <!-- Email -->
             <div class="col-md-4 position-relative">
                 <label for="txtEmail" class="form-label">Email</label>
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" />
+                <asp:TextBox ID="txtEmail" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="correo@email.com"/>
                 <asp:RegularExpressionValidator ErrorMessage="Email inválido" ControlToValidate="txtEmail" ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" runat="server" />
             </div>
 
             <!-- Dirección -->
             <div class="col-md-6 position-relative">
                 <label for="txtDireccion" class="form-label">Dirección</label>
-                <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control" />
+                <asp:TextBox ID="txtDireccion" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Calle Siempreviva 123"/>
             </div>
 
             <!-- Ciudad -->
             <div class="col-md-3 position-relative">
                 <label for="txtCiudad" class="form-label">Ciudad</label>
-                <asp:TextBox ID="txtCiudad" runat="server" CssClass="form-control" />
+                <asp:TextBox ID="txtCiudad" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Ciudad"/>
             </div>
 
             <!-- Código Postal -->
             <div class="col-md-3 position-relative">
                 <label for="txtCP" class="form-label">CP</label>
-                <asp:TextBox ID="txtCP" runat="server" CssClass="form-control" />
+                <asp:TextBox ID="txtCP" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="1234"/>
             </div>
 
             <!-- Botón dinámico -->
