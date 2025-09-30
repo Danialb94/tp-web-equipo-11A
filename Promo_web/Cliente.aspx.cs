@@ -13,7 +13,14 @@ namespace Promo_web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["id"] != null)
+                {
+                    int idPremio = int.Parse(Request.QueryString["id"]);
+                    Session["IdPremio"] = idPremio;
+                }
+            }
         }
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -54,6 +61,48 @@ namespace Promo_web
                 btnGuardar.Text = "Guardar Cliente";
             }
         }
+        protected void btnCanjear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClienteNegocio  negocio = new ClienteNegocio();
+                string codigoVoucher = Session["CodigoVoucher"]?.ToString();
+                int idPremio = (int)Session["IdPremio"];
+                int idCliente = negocio.ObtenerIdDocumento(txtDocumento.Text);
+                
+
+                if (codigoVoucher==null||codigoVoucher=="")
+                {
+                    lblCanje.Text = "Error: no se encontró el código de voucher.";
+                    lblCanje.CssClass = "text-danger";
+                    return;
+                }
+
+                VoucherNegocio vNegocio = new VoucherNegocio();
+                vNegocio.CanjearVoucher(codigoVoucher, idCliente, idPremio);
+
+                EmailService emailService = new EmailService(
+                    "programacionpruebamail@gmail.com",
+                    "wnzlnohczkdzlbas"
+                );
+
+                emailService.ArmarCorreo(
+                        txtEmail.Text,
+                        txtNombre.Text,
+                        txtApellido.Text
+                    );
+                emailService.EnviarCorreo();
+
+                lblCanje.Text = "¡Voucher canjeado exitosamente!";
+                lblCanje.CssClass = "text-success";
+
+            }
+            catch (Exception ex)
+            {
+                lblCanje.Text = "Error al canjear: " + ex.Message;
+                lblCanje.CssClass = "text-danger";
+            }
+        }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -74,10 +123,7 @@ namespace Promo_web
                 nuevo.Ciudad = txtCiudad.Text;
                 nuevo.CP = int.Parse(txtCP.Text);
 
-                EmailService emailService = new EmailService(
-                    "programacionpruebamail@gmail.com",
-                    "wnzlnohczkdzlbas"
-                );
+                
 
                 if (negocio.ExisteCliente(nuevo.Documento))
                 {
@@ -86,11 +132,7 @@ namespace Promo_web
                     lblMensaje.CssClass = "text-warning fw-bold";
 
                     
-                    emailService.ArmarCorreo(
-                        txtEmail.Text,
-                        txtNombre.Text,
-                        txtApellido.Text
-                    );
+                    
                 }
                 else
                 {
@@ -99,14 +141,10 @@ namespace Promo_web
                     lblMensaje.CssClass = "text-success fw-bold";
 
                   
-                    emailService.ArmarCorreo(
-                        txtEmail.Text,
-                        txtNombre.Text,
-                        txtApellido.Text
-                    );
+                
                 }
 
-                emailService.EnviarCorreo();
+                
             }
             catch (Exception ex)
             {

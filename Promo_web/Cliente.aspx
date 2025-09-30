@@ -25,7 +25,7 @@
             <div class="col-md-4 position-relative">
                 <label for="txtNombre" class="form-label">Nombre</label>
                 <asp:TextBox ID="txtNombre" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Nombre" />
-                 <asp:RegularExpressionValidator ErrorMessage="No se aceptan números" ControlToValidate="txtNombre" ValidationExpression="^[^0-9]*$" runat="server" />
+                <asp:RegularExpressionValidator ErrorMessage="No se aceptan números" ControlToValidate="txtNombre" ValidationExpression="^[^0-9]*$" runat="server" />
             </div>
 
             <!-- Apellido -->
@@ -38,31 +38,36 @@
             <!-- Email -->
             <div class="col-md-4 position-relative">
                 <label for="txtEmail" class="form-label">Email</label>
-                <asp:TextBox ID="txtEmail" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="correo@email.com"/>
+                <asp:TextBox ID="txtEmail" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="correo@email.com" />
                 <asp:RegularExpressionValidator ErrorMessage="Email inválido" ControlToValidate="txtEmail" ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" runat="server" />
             </div>
 
             <!-- Dirección -->
             <div class="col-md-6 position-relative">
                 <label for="txtDireccion" class="form-label">Dirección</label>
-                <asp:TextBox ID="txtDireccion" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Calle Siempreviva 123"/>
+                <asp:TextBox ID="txtDireccion" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Calle Siempreviva 123" />
             </div>
 
             <!-- Ciudad -->
             <div class="col-md-3 position-relative">
                 <label for="txtCiudad" class="form-label">Ciudad</label>
-                <asp:TextBox ID="txtCiudad" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Ciudad"/>
+                <asp:TextBox ID="txtCiudad" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Ciudad" />
             </div>
 
             <!-- Código Postal -->
             <div class="col-md-3 position-relative">
                 <label for="txtCP" class="form-label">CP</label>
-                <asp:TextBox ID="txtCP" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="1234"/>
+                <asp:TextBox ID="txtCP" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="1234" />
             </div>
 
             <!-- Botón dinámico -->
             <div class="col-12 mt-2">
                 <asp:Button ID="btnGuardar" runat="server" Text="Participar!" CssClass="btn btn-success me-2" OnClick="btnGuardar_Click" />
+            </div>
+
+            <div class="col-12 mt-2">
+                <asp:Button ID="btnCanjear" runat="server" Text="Canjear Voucher" CssClass="btn btn-success mt-3" OnClick="btnCanjear_Click" />
+                <asp:Label ID="lblCanje" runat="server" CssClass="fw-bold mt-2" />
             </div>
         </div>
 

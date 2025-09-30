@@ -27,7 +27,9 @@ namespace Promo_web
 
             if (voucher)
             {
-                Response.Redirect("elegirPremio.aspx");
+                string codVoucher = txtVoucher.Text;
+                Response.Redirect("elegirPremio.aspx", false);
+                Session.Add("codigoVoucher", codVoucher);
             }
             else
             {

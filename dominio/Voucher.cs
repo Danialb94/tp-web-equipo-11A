@@ -10,8 +10,8 @@ namespace dominio
     {
         public string CodVoucher { get; set; }
 
-        //falta agregar clase cliente
-        public int idCliente { get; set; }
+        
+        Cliente idcliente { get; set; }
 
         public DateTime fecha { get; set; }
 

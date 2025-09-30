@@ -130,5 +130,31 @@ namespace negocio
             }
         }
 
+        public int ObtenerIdDocumento(string documento)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT Id FROM Clientes WHERE Documento = @documento");
+                datos.setearParametro("@documento", documento);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                    return (int)datos.Lector["Id"];
+
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
+
     }
 }
