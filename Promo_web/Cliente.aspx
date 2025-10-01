@@ -64,7 +64,7 @@
             <div class="col-12 mt-2">
                 <asp:Button ID="btnGuardar" runat="server" Text="Participar!" CssClass="btn btn-success me-2" OnClick="btnGuardar_Click" />
             </div>
-
+             <!-- Botón canjear -->
             <div class="col-12 mt-2">
                 <asp:Button ID="btnCanjear" runat="server" Text="Canjear Voucher" CssClass="btn btn-success mt-3" OnClick="btnCanjear_Click" />
                 <asp:Label ID="lblCanje" runat="server" CssClass="fw-bold mt-2" />

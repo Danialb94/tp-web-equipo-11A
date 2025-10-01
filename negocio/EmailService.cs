@@ -28,7 +28,7 @@ namespace negocio
             email.Subject = "Registro exitoso! Promo web";
             email.Body = "<h1>Tu registro fue exitoso!</h1>" +
                          "<br> Hola, " + nombre + " " + apellido +
-                         "! Gracias por participar en la Promo Web!";
+                         "!<br> <br>Gracias por participar en la Promo Web!";
             email.IsBodyHtml = true;
         }
 
