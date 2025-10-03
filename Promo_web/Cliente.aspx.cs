@@ -24,6 +24,7 @@ namespace Promo_web
         }
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
+            lblCanje.Text = "";
             ClienteNegocio negocio = new ClienteNegocio();
             dominio.Cliente cliente = negocio.BuscarPorDocumento(txtDocumento.Text);
 
@@ -60,6 +61,7 @@ namespace Promo_web
 
                 btnGuardar.Text = "Guardar Cliente";
             }
+            
         }
         protected void btnCanjear_Click(object sender, EventArgs e)
         {
@@ -95,11 +97,16 @@ namespace Promo_web
 
                 lblCanje.Text = "¡Voucher canjeado exitosamente!";
                 lblCanje.CssClass = "text-success";
+                
 
+            }
+            catch (NullReferenceException ex) {
+                lblMensaje.Text = "Error: " + ex.Message;
+                lblMensaje.CssClass = "text-danger fw-bold";
             }
             catch (Exception ex)
             {
-                lblCanje.Text = "Error al canjear: " + ex.Message;
+                lblCanje.Text = "No fue posible canjear el Voucher. Corroborar los datos ingresados";
                 lblCanje.CssClass = "text-danger";
             }
         }
@@ -128,7 +135,7 @@ namespace Promo_web
                 if (negocio.ExisteCliente(nuevo.Documento))
                 {
                     negocio.Modificar(nuevo);
-                    lblMensaje.Text = "Cliente actualizado ✅";
+                    lblMensaje.Text = "El registro fue actualizado ✅";
                     lblMensaje.CssClass = "text-warning fw-bold";
 
                     
@@ -137,7 +144,7 @@ namespace Promo_web
                 else
                 {
                     negocio.Agregar(nuevo);
-                    lblMensaje.Text = "Cliente registrado correctamente ✅";
+                    lblMensaje.Text = "Fue registrado correctamente ✅";
                     lblMensaje.CssClass = "text-success fw-bold";
 
                   
@@ -148,7 +155,7 @@ namespace Promo_web
             }
             catch (Exception ex)
             {
-                lblMensaje.Text = "Error: " + ex.Message;
+                lblMensaje.Text = "No fue posible darlo de alta. Corrobore los datos cargados";
                 lblMensaje.CssClass = "text-danger fw-bold";
             }
         }
