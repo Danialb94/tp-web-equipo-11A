@@ -24,12 +24,12 @@ namespace Promo_web
         protected global::System.Web.UI.WebControls.Image imgPremio;
 
         /// <summary>
-        /// Controllo lblMensaje.
+        /// Controllo lblPremio.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.WebControls.Label lblPremio;
     }
 }
