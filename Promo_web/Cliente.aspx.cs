@@ -95,9 +95,9 @@ namespace Promo_web
                     );
                 emailService.EnviarCorreo();
 
-                lblCanje.Text = "¡Voucher canjeado exitosamente!";
+                lblCanje.Text = "¡Voucher canjeado! Espere un momento...<br /><meta http-equiv='refresh' content='2;url=Exito.aspx'>";
                 lblCanje.CssClass = "text-success";
-                
+
 
             }
             catch (NullReferenceException ex) {
