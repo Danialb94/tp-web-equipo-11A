@@ -50,7 +50,7 @@
         <p class="fs-4 mt-3">Tu canje fue exitoso. Pronto recibirás más información en tu correo electrónico.</p>
 
         <div class="mt-4">
-            <asp:Image ID="imgPremio" runat="server" CssClass="img-fluid rounded shadow" Style="max-width:400px;" />
+            <asp:Image ID="imgPremio" runat="server" CssClass="img-fluid rounded shadow" Style="max-width:400px;"/>
             <h3 class="mt-3 text-primary">
                 <asp:Label ID="lblPremio" runat="server" />
             </h3>

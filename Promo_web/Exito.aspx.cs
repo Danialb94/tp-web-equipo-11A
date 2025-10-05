@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using negocio;
-using dominio; 
+using dominio;
+using System.ComponentModel.DataAnnotations;
 
 namespace Promo_web
 {
@@ -25,17 +26,27 @@ namespace Promo_web
 
                         if (articulo != null && articulo.Imagenes != null && articulo.Imagenes.Count > 0)
                         {
-                            imgPremio.ImageUrl = articulo.Imagenes[0].urlImagen;
-                            lblPremio.Text = articulo.Nombre;
+                            if(Uri.TryCreate(articulo.Imagenes[0].urlImagen, UriKind.Absolute, out Uri uri) && Uri.IsWellFormedUriString(articulo.Imagenes[0].urlImagen, UriKind.Absolute))
+                            {
+                                imgPremio.ImageUrl = articulo.Imagenes[0].urlImagen;
+                                lblPremio.Text = articulo.Nombre;
+                            }
+                            else
+                            {
+                                imgPremio.ImageUrl = ResolveUrl("~/images/caja-de-regalo.png");
+                                lblPremio.Text = "Estas participando por: " + articulo.Nombre + ".";
+                            }
                         }
                         else
                         {
-                            lblPremio.Text = "No se encontró la imagen del premio.";
+                            imgPremio.ImageUrl = ResolveUrl("~/images/caja-de-regalo.png");
+                            lblPremio.Text = "Estas participando por: "+articulo.Nombre+".";
                         }
                     }
                     else
                     {
-                        lblPremio.Text = "No se encontró información del premio.";
+                        lblPremio.Text = 
+                            "No se encontró información del premio.";
                     }
                 }
                 catch (Exception ex)

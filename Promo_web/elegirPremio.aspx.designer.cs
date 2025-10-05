@@ -1,10 +1,10 @@
 ﻿//------------------------------------------------------------------------------
-// <generato automaticamente>
-//     Codice generato da uno strumento.
+// <generado automáticamente>
+//     Este código fue generado por una herramienta.
 //
-//     Le modifiche a questo file possono causare un comportamento non corretto e verranno perse se
-//     il codice viene rigenerato. 
-// </generato automaticamente>
+//     Los cambios en este archivo podrían causar un comportamiento incorrecto y se perderán si
+//     se vuelve a generar el código. 
+// </generado automáticamente>
 //------------------------------------------------------------------------------
 
 namespace Promo_web
