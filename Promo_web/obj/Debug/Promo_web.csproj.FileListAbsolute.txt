@@ -156,3 +156,15 @@ C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11
 C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11A\tp-web-equipo-11A\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.csproj.Up2Date
 C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11A\tp-web-equipo-11A\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.dll
 C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\tp-web-equipo-11A\tp-web-equipo-11A\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.pdb
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\bin\Promo_web.dll.config
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\bin\Promo_web.dll
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\bin\Promo_web.pdb
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\bin\dominio.dll
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\bin\negocio.dll
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\bin\dominio.pdb
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\bin\negocio.pdb
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.csproj.AssemblyReference.cache
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.csproj.CoreCompileInputs.cache
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.csproj.Up2Date
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.dll
+C:\Users\Dani\Desktop\Facultad\Programacion 3\tp-web-equipo-11A\Promo_web\obj\Debug\Promo_web.pdb
