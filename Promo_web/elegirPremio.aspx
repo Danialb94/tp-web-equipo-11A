@@ -19,10 +19,11 @@
                                 {
                                     if (articulo.Imagenes[0].idImagen == imagen.idImagen)
                                     {%>
-                                        <div class="carousel-item active">
-                                            <img src="<%:imagen.urlImagen %>" class="img-fluid object-fit-contain" style="width: 300px; height: 300px" onerror="this.onerror=null; this.src='<%= ResolveUrl("~/images/placeholder.png") %>';">
-                                            <%--Si el relativeUrl parámetro contiene una dirección URL absoluta, la dirección URL se devuelve sin cambios. Si el relativeUrl parámetro contiene una dirección URL relativa, esa dirección URL se cambia a una dirección URL relativa correcta para la ruta de acceso de solicitud actual, de modo que el explorador pueda resolver la dirección URL.--%>
-                                        </div>
+                                            <div class="carousel-item active">
+                                                <img src="<%:imagen.urlImagen %>" class="img-fluid object-fit-contain" style="width: 300px; height: 300px" onerror="this.onerror=null; this.src='<%= ResolveUrl("~/images/placeholder.png") %>';">
+                                                <%--Si el relativeUrl parámetro contiene una dirección URL absoluta, la dirección URL se devuelve sin cambios. Si el relativeUrl parámetro contiene una dirección URL relativa, esa dirección URL se cambia a una dirección URL relativa correcta para la ruta de acceso de solicitud actual, de modo que el explorador pueda resolver la dirección URL.--%>
+                                            </div>
+                                        
                                     <%}
                                     else
                                     {%>

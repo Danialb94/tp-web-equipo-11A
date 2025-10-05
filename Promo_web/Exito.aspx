@@ -45,18 +45,18 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="text-center mt-5 fade-in">
+    <div class="text-center mt-4 fade-in">
         <h1 class="text-success fw-bold display-4">🎉 ¡Felicidades! 🎉</h1>
         <p class="fs-4 mt-3">Tu canje fue exitoso. Pronto recibirás más información en tu correo electrónico.</p>
 
         <div class="mt-4">
-            <asp:Image ID="imgPremio" runat="server" CssClass="img-fluid rounded shadow" Style="max-width:400px;"/>
+            <asp:Image ID="imgPremio" runat="server" class="img-fluid object-fit-contain rounded-5 shadow" Style="width: 250px;height: 300px;"/>
             <h3 class="mt-3 text-primary">
                 <asp:Label ID="lblPremio" runat="server" />
             </h3>
         </div>
 
-        <div class="mt-5">
+        <div class="mt-4">
             <a href="Default.aspx" class="btn btn-lg btn-outline-dark">Volver al inicio</a>
         </div>
     </div>
