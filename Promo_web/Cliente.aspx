@@ -24,21 +24,21 @@
             <!-- Nombre -->
             <div class="col-md-4 position-relative">
                 <label for="txtNombre" class="form-label">Nombre</label>
-                <asp:TextBox ID="txtNombre" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Nombre" required="required"/>
+                <asp:TextBox ID="txtNombre" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Nombre" required="required" />
                 <asp:RegularExpressionValidator ErrorMessage="Solo se permiten letras" ControlToValidate="txtNombre" ValidationExpression="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" CssClass="text-danger" Display="Dynamic" runat="server" />
             </div>
 
             <!-- Apellido -->
             <div class="col-md-4 position-relative">
                 <label for="txtApellido" class="form-label">Apellido</label>
-                <asp:TextBox ID="txtApellido" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Apellido" required="required"/>
+                <asp:TextBox ID="txtApellido" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Apellido" required="required" />
                 <asp:RegularExpressionValidator ErrorMessage="Solo se permiten letras" ControlToValidate="txtApellido" ValidationExpression="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" CssClass="text-danger" Display="Dynamic" runat="server" />
             </div>
 
             <!-- Email -->
             <div class="col-md-4 position-relative">
                 <label for="txtEmail" class="form-label">Email</label>
-                <asp:TextBox ID="txtEmail" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="correo@email.com" required="required"/>
+                <asp:TextBox ID="txtEmail" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="correo@email.com" required="required" />
                 <asp:RegularExpressionValidator ErrorMessage="Email inválido" ControlToValidate="txtEmail" ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" CssClass="text-danger" Display="Dynamic" runat="server" />
             </div>
 
@@ -46,24 +46,27 @@
             <div class="col-md-6 position-relative">
                 <label for="txtDireccion" class="form-label">Dirección</label>
                 <asp:TextBox ID="txtDireccion" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Calle Siempreviva 123" />
+                <asp:RegularExpressionValidator ErrorMessage="Dirección inválida" ControlToValidate="txtDireccion" ValidationExpression="^([A-Za-z]{4,})+\s+(\d{1,5})$|^([A-Za-z]{4,})+\s+(\d{1,3})+\s+(\d{1,5})$|^([A-Za-z]{2,})+\s+([A-Za-z]{4,})+\s+(\d{1,5})$" runat="server" />
             </div>
 
             <!-- Ciudad -->
             <div class="col-md-3 position-relative">
                 <label for="txtCiudad" class="form-label">Ciudad</label>
                 <asp:TextBox ID="txtCiudad" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Ciudad" />
+                <asp:RegularExpressionValidator ErrorMessage="Ciudad inválida" ControlToValidate="txtCiudad" ValidationExpression="(^([A-Za-z]{4,10})$|^([A-Za-z]{3,10}).*([A-Za-z]{3,10})$)|^([A-Za-z]{4,10}).*([1-9]{1,5})" runat="server" />
             </div>
 
             <!-- Código Postal -->
             <div class="col-md-3 position-relative">
                 <label for="txtCP" class="form-label">CP</label>
                 <asp:TextBox ID="txtCP" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="1234" />
+                <asp:RegularExpressionValidator ErrorMessage="Código Postal inválido" ControlToValidate="txtCP" ValidationExpression="^[0-9]{4}" runat="server" />
             </div>
 
             <!-- Botones dinámicos -->
             <div class="col-12 mt-2">
                 <asp:Button ID="btnGuardar" runat="server" Text="Guardar Cliente" CssClass="btn btn-success me-2" OnClick="btnGuardar_Click" />
-                <asp:Button ID="btnCancelar" Text ="Cancelar" runat="server" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" Visible="false" />
+                <asp:Button ID="btnCancelar" Text="Cancelar" runat="server" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" Visible="false" />
             </div>
             <!-- Botón canjear -->
             <div class="col-12 mt-2">
