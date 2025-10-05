@@ -60,9 +60,10 @@
                 <asp:TextBox ID="txtCP" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="1234" />
             </div>
 
-            <!-- Botón dinámico -->
+            <!-- Botones dinámicos -->
             <div class="col-12 mt-2">
-                <asp:Button ID="btnGuardar" runat="server" Text="Participar!" CssClass="btn btn-success me-2" OnClick="btnGuardar_Click" />
+                <asp:Button ID="btnGuardar" runat="server" Text="Guardar Cliente" CssClass="btn btn-success me-2" OnClick="btnGuardar_Click" />
+                <asp:Button ID="btnCancelar" Text ="Cancelar" runat="server" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" Visible="false" />
             </div>
             <!-- Botón canjear -->
             <div class="col-12 mt-2">

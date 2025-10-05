@@ -44,7 +44,8 @@ namespace Promo_web
                 lblMensaje.CssClass = "text-success fw-bold";
 
                 btnGuardar.Text = "Modificar Cliente";
-
+                btnCancelar.Visible = false;
+                Session["ClienteOriginal"] = cliente;
             }
             else
             {
@@ -60,20 +61,21 @@ namespace Promo_web
                 lblMensaje.CssClass = "text-danger fw-bold";
 
                 btnGuardar.Text = "Guardar Cliente";
+                btnCancelar.Visible = false;
             }
-            
+
         }
         protected void btnCanjear_Click(object sender, EventArgs e)
         {
             try
             {
-                ClienteNegocio  negocio = new ClienteNegocio();
+                ClienteNegocio negocio = new ClienteNegocio();
                 string codigoVoucher = Session["CodigoVoucher"]?.ToString();
                 int idPremio = (int)Session["IdPremio"];
                 int idCliente = negocio.ObtenerIdDocumento(txtDocumento.Text);
-                
 
-                if (codigoVoucher==null||codigoVoucher=="")
+
+                if (codigoVoucher == null || codigoVoucher == "")
                 {
                     lblCanje.Text = "Error: no se encontró el código de voucher.";
                     lblCanje.CssClass = "text-danger";
@@ -100,7 +102,8 @@ namespace Promo_web
 
 
             }
-            catch (NullReferenceException ex) {
+            catch (NullReferenceException ex)
+            {
                 lblMensaje.Text = "Error: " + ex.Message;
                 lblMensaje.CssClass = "text-danger fw-bold";
             }
@@ -122,6 +125,15 @@ namespace Promo_web
                 if (!Page.IsValid)
                     return;
 
+                if (btnGuardar.Text == "Modificar Cliente")
+                {
+                    btnGuardar.Text = "Guardar cambios";    
+                    btnCancelar.Visible = true;  
+                    lblMensaje.Text = "Editá los campos y guardá los cambios";
+                    lblMensaje.CssClass = "text-info fw-bold";                
+                    return;
+                }
+
                 nuevo.Documento = txtDocumento.Text;
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Apellido = txtApellido.Text;
@@ -130,16 +142,29 @@ namespace Promo_web
                 nuevo.Ciudad = txtCiudad.Text;
                 nuevo.CP = int.Parse(txtCP.Text);
 
-                
+
 
                 if (negocio.ExisteCliente(nuevo.Documento))
                 {
+                    dominio.Cliente original = (dominio.Cliente)Session["ClienteOriginal"];
+                    if (original != null &&
+                        original.Nombre == nuevo.Nombre &&
+                        original.Apellido == nuevo.Apellido &&
+                        original.Email == nuevo.Email &&
+                        original.Direccion == nuevo.Direccion &&
+                        original.Ciudad == nuevo.Ciudad &&
+                        original.CP == nuevo.CP)
+                    {
+                        lblMensaje.Text = "No se detectaron cambios ❌";
+                        lblMensaje.CssClass = "text-warning fw-bold";
+                        return;
+                    }
+
+
                     negocio.Modificar(nuevo);
                     lblMensaje.Text = "El registro fue actualizado ✅";
                     lblMensaje.CssClass = "text-warning fw-bold";
 
-                    
-                    
                 }
                 else
                 {
@@ -147,17 +172,28 @@ namespace Promo_web
                     lblMensaje.Text = "Fue registrado correctamente ✅";
                     lblMensaje.CssClass = "text-success fw-bold";
 
-                  
-                
+
+
                 }
 
-                
+                btnGuardar.Text = "Modificar Cliente";
+                btnCancelar.Visible = false;
+
+
             }
             catch (Exception ex)
             {
                 lblMensaje.Text = "No fue posible darlo de alta. Corrobore los datos cargados";
                 lblMensaje.CssClass = "text-danger fw-bold";
             }
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            btnGuardar.Text = "Modificar Cliente";
+            btnCancelar.Visible = false;
+            lblMensaje.Text = "Modo edición cancelado";
+            lblMensaje.CssClass = "text-muted fw-bold";
         }
 
     }
