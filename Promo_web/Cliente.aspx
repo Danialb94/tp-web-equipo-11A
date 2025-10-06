@@ -13,7 +13,7 @@
                 <asp:TextBox ID="txtDocumento" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="DNI 11222333" required="required" />
                 <asp:RegularExpressionValidator ErrorMessage="No válido" ControlToValidate="txtDocumento" ValidationExpression="^\d{7,8}$" CssClass="text-danger" Display="Dynamic" runat="server" />
             </div>
-            <div class="align-self-center col-md-2 mt-4">
+            <div class="align-content-end">
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar Cliente" CssClass="btn btn-primary" OnClick="btnBuscar_Click" />
             </div>
         </div>
@@ -45,22 +45,22 @@
             <!-- Dirección -->
             <div class="col-md-6 position-relative">
                 <label for="txtDireccion" class="form-label">Dirección</label>
-                <asp:TextBox ID="txtDireccion" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Calle Siempreviva 123" />
-                <asp:RegularExpressionValidator ErrorMessage="Dirección inválida" ControlToValidate="txtDireccion" ValidationExpression="^([A-Za-z]{4,})+\s+(\d{1,5})$|^([A-Za-z]{4,})+\s+(\d{1,3})+\s+(\d{1,5})$|^([A-Za-z]{2,})+\s+([A-Za-z]{4,})+\s+(\d{1,5})$" runat="server" />
+                <asp:TextBox ID="txtDireccion" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Calle Siempreviva 123" required="required"/>
+                <asp:RegularExpressionValidator ErrorMessage="Dirección inválida" ControlToValidate="txtDireccion" ValidationExpression="^([A-Za-z]{4,})+\s+(\d{1,5})$|^([A-Za-z]{4,})+\s+(\d{1,3})+\s+(\d{1,5})$|^([A-Za-z]{2,})+\s+([A-Za-z]{4,})+\s+(\d{1,5})$" CssClass="text-danger" Display="Dynamic" runat="server" />
             </div>
 
             <!-- Ciudad -->
             <div class="col-md-3 position-relative">
                 <label for="txtCiudad" class="form-label">Ciudad</label>
-                <asp:TextBox ID="txtCiudad" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Ciudad" />
-                <asp:RegularExpressionValidator ErrorMessage="Ciudad inválida" ControlToValidate="txtCiudad" ValidationExpression="(^([A-Za-z]{4,10})$|^([A-Za-z]{3,10}).*([A-Za-z]{3,10})$)|^([A-Za-z]{4,10}).*([1-9]{1,5})" runat="server" />
+                <asp:TextBox ID="txtCiudad" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="Ciudad" required="required"/>
+                <asp:RegularExpressionValidator ErrorMessage="Ciudad inválida" ControlToValidate="txtCiudad" ValidationExpression="(^([A-Za-z]{4,10})$|^([A-Za-z]{3,10}).*([A-Za-z]{3,10})$)|^([A-Za-z]{4,10}).*([1-9]{1,5})" CssClass="text-danger" Display="Dynamic" runat="server" />
             </div>
 
             <!-- Código Postal -->
             <div class="col-md-3 position-relative">
                 <label for="txtCP" class="form-label">CP</label>
-                <asp:TextBox ID="txtCP" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="1234" />
-                <asp:RegularExpressionValidator ErrorMessage="Código Postal inválido" ControlToValidate="txtCP" ValidationExpression="^[0-9]{4}" runat="server" />
+                <asp:TextBox ID="txtCP" runat="server" class="bg-dark-subtle border-dark-subtle form-control" placeholder="1234" required="required"/>
+                <asp:RegularExpressionValidator ErrorMessage="Código Postal inválido" ControlToValidate="txtCP" ValidationExpression="^[0-9]{4}" CssClass="text-danger" Display="Dynamic" runat="server" />
             </div>
 
             <!-- Botones dinámicos -->

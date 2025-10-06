@@ -9,8 +9,24 @@ using negocio;
 
 namespace Promo_web
 {
+
+
     public partial class Cliente : System.Web.UI.Page
     {
+        dominio.Cliente original = new dominio.Cliente();
+
+
+
+        public void SoloLectura(bool flag)
+        {
+            txtNombre.ReadOnly = flag;
+            txtApellido.ReadOnly = flag;
+            txtEmail.ReadOnly = flag;
+            txtDireccion.ReadOnly = flag;
+            txtCiudad.ReadOnly = flag;
+            txtCP.ReadOnly = flag;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -24,6 +40,7 @@ namespace Promo_web
         }
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
+            SoloLectura(false);
             lblCanje.Text = "";
             ClienteNegocio negocio = new ClienteNegocio();
             dominio.Cliente cliente = negocio.BuscarPorDocumento(txtDocumento.Text);
@@ -46,6 +63,8 @@ namespace Promo_web
                 btnGuardar.Text = "Modificar Cliente";
                 btnCancelar.Visible = false;
                 Session["ClienteOriginal"] = cliente;
+                original = (dominio.Cliente)Session["ClienteOriginal"];
+                SoloLectura(true);
             }
             else
             {
@@ -62,6 +81,7 @@ namespace Promo_web
 
                 btnGuardar.Text = "Guardar Cliente";
                 btnCancelar.Visible = false;
+                btnCanjear.Visible = false;
             }
 
         }
@@ -127,10 +147,12 @@ namespace Promo_web
 
                 if (btnGuardar.Text == "Modificar Cliente")
                 {
-                    btnGuardar.Text = "Guardar cambios";    
-                    btnCancelar.Visible = true;  
+                    btnCanjear.Visible = false;
+                    SoloLectura(false);
+                    btnGuardar.Text = "Guardar cambios";
+                    btnCancelar.Visible = true;
                     lblMensaje.Text = "Editá los campos y guardá los cambios";
-                    lblMensaje.CssClass = "text-info fw-bold";                
+                    lblMensaje.CssClass = "text-info fw-bold";
                     return;
                 }
 
@@ -146,7 +168,7 @@ namespace Promo_web
 
                 if (negocio.ExisteCliente(nuevo.Documento))
                 {
-                    dominio.Cliente original = (dominio.Cliente)Session["ClienteOriginal"];
+                    original = (dominio.Cliente)Session["ClienteOriginal"];
                     if (original != null &&
                         original.Nombre == nuevo.Nombre &&
                         original.Apellido == nuevo.Apellido &&
@@ -165,6 +187,7 @@ namespace Promo_web
                     lblMensaje.Text = "El registro fue actualizado ✅";
                     lblMensaje.CssClass = "text-warning fw-bold";
 
+
                 }
                 else
                 {
@@ -178,6 +201,10 @@ namespace Promo_web
 
                 btnGuardar.Text = "Modificar Cliente";
                 btnCancelar.Visible = false;
+                btnCanjear.Visible = true;
+                SoloLectura(true);
+                Session["ClienteOriginal"] = nuevo;
+
 
 
             }
@@ -194,6 +221,17 @@ namespace Promo_web
             btnCancelar.Visible = false;
             lblMensaje.Text = "Modo edición cancelado";
             lblMensaje.CssClass = "text-muted fw-bold";
+            btnCanjear.Visible = true;
+
+            original=(dominio.Cliente)Session["ClienteOriginal"];
+            txtNombre.Text = original.Nombre;
+            txtApellido.Text = original.Apellido;
+            txtEmail.Text = original.Email;
+            txtDireccion.Text = original.Direccion;
+            txtCiudad.Text = original.Ciudad;
+            txtCP.Text = original.CP.ToString();
+
+            SoloLectura(true);
         }
 
     }
